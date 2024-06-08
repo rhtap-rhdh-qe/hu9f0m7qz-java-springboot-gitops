@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hu9f0m7qz-java-springboot-gitops
+  description: This is GitOps manifest for hu9f0m7qz-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: hu9f0m7qz-java-springboot
+    janus-idp.io/tekton: hu9f0m7qz-java-springboot 
+    backstage.io/kubernetes-id: hu9f0m7qz-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hu9f0m7qz-java-springboot
